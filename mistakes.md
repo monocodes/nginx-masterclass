@@ -1,3 +1,4 @@
+## reverse-proxy-discussion
 Hi everyone!
 
 I'm sorry, but most part of **29. Lab : Configure NGINX as Reverse Proxy** Lecture is a complete mess. **You can't use 2 virtual hosts with the same port that way.**
@@ -177,3 +178,19 @@ http {
    ```nginx
    code block 2
    ```
+
+---
+
+## 42. Prevent DOS attack or Limit the Service
+
+test url with `siege`
+
+- `-r` - --reps=NUM, REPS, number of times to run the test.
+
+```sh
+siege -v -r 2000 -c 500 https://ub22-nginx/assets/js/custom.js
+```
+
+`-r` is number of times to run the test. Not number of requests.
+
+`-c` - --concurrent=NUM, CONCURRENT users, default is 10. And it is limited to 255 if not changed in ~/.siege/siege.config
