@@ -1,4 +1,28 @@
+## review
+
+First of all, big thanks for this course to Anshul!
+
+It's a great introduction course for System Administrators or Web Programmers who are just getting started with NGINX.
+
+It's more a beginner course, not advanced. After this course you can safely start working with NGINX and dive deeper to more advanced features and write more advanced configs with the help of NGINX documentation or another resources.
+
+To further explore NGINX and solidify its fundamental concepts I can recommend this section - http://nginx.org/en/books.html
+
+You can get advanced book "The Complete NGINX Cookbook" by Derek DeJonghe here for free - https://www.nginx.com/resources/library/complete-nginx-cookbook/?utm_source=nginxorg&utm_medium=books&utm_campaign=ebooks
+
+This is another free handbook "The NGINX Handbook" by Farhan Hasin Chowdhury here https://www.freecodecamp.org/news/the-nginx-handbook/
+
+I would like to highlight a few cons:
+
+- No certbot introduction. Certbot now is essential part of NGINX configuration, because you want to have all your traffic to the internet encrypted. Certbot is the best way to start using free Let's Encrypt SSL certs.
+- You will not get best practices from this course, on the contrary, you will get the wrong idea about some concepts. For example, throughout the course you will use the main nginx.conf file. Which in fact is usually not touched at all. All user configs should be in /etc/nginx/conf.d or /etc/nginx/sites-avalaible for Ubuntu nginx package (it's an old deprecated way). I understand that it's ok for using the main config to demonstrate simple things clearly. But it would be much better to tell the students at some point in the course that they don't actually need to use the main config file in real world and that this approach is even the worst practice.
+- Sometimes Anshul is wrong about some concepts or tools. There are also mistakes in Anshul's configs. For example, there are mistakes from "Avoiding the Top 10 NGINX Configuration Mistakes" list. It's not a big deal for experienced Sysadmins, but we are talking about beginner's course...
+- The biggest con of the course is dead Q&A section. And as I understand, it's not the problem of a small user base. There are some questions without an answer for years. I started a thread about "29. Lab : Configure NGINX as Reverse Proxy". There are mistakes in Anshul's config presented in video. And what do you think happened? :) My question was just deleted.
+
+Anyway, I'm glad that this course exists and I really appreciate Anshul's hard work, thanks and wish a nice day to all the students :)
+
 ## reverse-proxy-discussion
+
 Hi everyone!
 
 I'm sorry, but most part of **29. Lab : Configure NGINX as Reverse Proxy** Lecture is a complete mess. **You can't use 2 virtual hosts with the same port that way.**
